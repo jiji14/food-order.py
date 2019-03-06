@@ -2,6 +2,7 @@ itemNames = ['ramen', 'udon', 'katsudon', 'egg', 'chashu', 'coke', 'sprite']
 
 itemTypes = {'ramen' : 'main',
             'udon' : 'main',
+            'katsudon' : 'main',
             'egg' : 'side',
             'chashu' : 'side',
             'coke' : 'drink',
@@ -9,6 +10,7 @@ itemTypes = {'ramen' : 'main',
 
 itemPrices = {'ramen' : 10000,
             'udon' : 9000,
+            'katsudon' : 8000,
             'egg' : 2000,
             'chashu' : 2000,
             'coke' : 1000,
