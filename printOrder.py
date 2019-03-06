@@ -14,7 +14,6 @@ itemPrices = {'ramen' : 10000,
             'coke' : 1000,
             'sprite' : 1000}
 
-
 def printOrder(items):
     print("prints out")
 
@@ -23,19 +22,17 @@ def printOrder(items):
     else:
         sum = 0
         type_list = []
-        for food in items:
-            type = itemTypes.get(food)
+        for menu in items:
+            type = itemTypes.get(menu)
             if type not in type_list:
                 type_list.append(type)
-
         for type in type_list:
             print("{}". format(type))
-            for food in items:
-                money = itemPrices.get(food)
-                if itemTypes.get(food) == type:
-                    print(" {}". format(food))
+            for menu in items:
+                money = itemPrices.get(menu)
+                if itemTypes.get(menu) == type:
+                    print(" {}". format(menu))
                     sum += money   
-
         print("total : {}". format(sum))
     print("\n")
 
