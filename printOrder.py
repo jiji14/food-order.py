@@ -22,18 +22,23 @@ def printOrder(items):
         print("empty order")
     else:
         sum = 0
+        type_list = []
         for food in items:
             type = itemTypes.get(food)
-        
-            print("{}". format(type))
-            print("  {}". format(food))
-            print(" ")
+            if type not in type_list:
+                type_list.append(type)
 
-            money = itemPrices.get(food)
-            sum += money
+        for type in type_list:
+            print("{}". format(type))
+            for food in items:
+                money = itemPrices.get(food)
+                if itemTypes.get(food) == type:
+                    print(" {}". format(food))
+                    sum += money   
+
         print("total : {}". format(sum))
     print("\n")
 
-print(printOrder([]))
-print(printOrder(['ramen']))
-print(printOrder(['ramen', 'chashu', 'sprite', 'ramen']))
+printOrder([])
+printOrder(['ramen'])
+printOrder(['ramen', 'chashu', 'sprite', 'ramen'])
